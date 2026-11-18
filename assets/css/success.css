@@ -1,0 +1,88 @@
+/* ===== Standardized Color Palette ===== */
+:root {
+  --primary: #1e3a8a; /* Deep blue */
+  --secondary: #14b8a6; /* Teal */
+  --accent: #facc15; /* Gold */
+  --neutral-dark: #0f172a;
+  --neutral-light: #f1f5f9;
+  --white: #ffffff;
+}
+
+/* ===== Base Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.success-container {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  animation: fadeUp 0.8s ease-in-out;
+}
+
+.success-icon {
+  font-size: 64px;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+p {
+  color: var(--neutral-dark);
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Confetti Canvas ===== */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
